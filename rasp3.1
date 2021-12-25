@@ -1,0 +1,106 @@
+#to enable dhcp
+   11  vi /etc/dhcpcd.conf 
+  #line..47,48
+   12  sudo reboot
+#to get the latest Buster
+   15  sudo apt-get update
+   48  sudo apt-get full-upgrade
+   50  sudo apt-get dist-update
+   51  sudo apt-get dist-upgrade
+#to change keyboard gb to us
+   52  sudo vi /etc/default/keyboard
+   53  reboot
+#to install iptables
+   57  sudo apt install iptables-persistent -y
+   58  journactl -xe -u docker
+   59  sudo apt purge docker docker-ce docker-engine docker.io containerd runc
+   60  sudo systemctl list-jobs
+   61  /var/lib/containerd/
+   63  ls /var/lib/containerd/
+   64  sudo ls /var/lib/containerd/
+   65  sudo apt install iptables-persistent -y
+   66  sudo iptables -F
+   69  sudo apt-get update
+   71  apt list --upgradable
+   72  sudo apt list --upgradable
+   73  lsblk
+   78  sudo apt-get dist-upgrade
+   81  sudo apt-get dist-upgrade --allow-releaseinfo-change update
+   82  sudo apt-get full-upgrade --allow-releaseinfo-change update
+   83  sudo apt-get --allow-releaseinfo-change update full-upgrade
+   84  sudo apt-get --allow-releaseinfo-change update
+   85  sudo apt dist-upgrade -y
+   86  sudo apt update
+   87  sudo rpi-update
+   88  sudo vi /etc/apt/sources.list
+   89  sudo apt dist-upgrade -y
+   90  vi /etc/apt/sources.list.d/raspi.list 
+   91  sudo vi /etc/apt/sources.list.d/raspi.list 
+   92  sudo apt update
+   93  sudo apt update --allow-releaseinfo-change
+   94  sudo vi /etc/apt/sources.list.d/raspi.list 
+   95  sudo vi /etc/apt/sources.list
+   96  sudo apt update --allow-releaseinfo-change
+   97  sudo apt update -y
+#to install k3s 
+  124  sudo curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE=”644” sh -
+  125  sudo kubectl get nodes
+  126  reboot
+  127  sudo reboot
+  128  sudo su -
+  129  sudo iptables -F
+  130  sudo kubectl get nodes
+  131  env | grep -i kube
+  132  systemctl status docker
+  133  netstat -pnlt | grep 6443
+  134  sudo netstat -pnlt | grep 6443
+  135  sudo firewall-cmd --list-all
+  136  cd /var/log/journal
+  137  id -u www-data
+  138  sudo mkdir -p /var/lib/{pihole,wireguard}
+  139  $ sudo kubectl get nodes
+  140  sudo kubectl version
+
+  142  strace -eopenat kubectl version
+  
+  144  sudo kubectl get nodes
+  146  sudo netstat -pnlt | grep 6443
+#change fw rule
+  148  sudo iptables -A INPUT -p tcp --dport 6443 -j ACCEPT
+  149  vi /etc/fstab 
+ 
+  
+ #to install docker
+  162  sudo apt purge docker.io
+  163  sudo apt autoremove
+  164  sudo apt install docker.io
+ 
+  168  sudo docker pull portainer/portainer-ce:linux-arm
+  169  sudo docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:linux-arm
+  170  netstat -tulpn
+  #to fix k3s on pi error - cgroup_memory=1 cgroup_enable=memory #2067 
+  175  cat /boot/cmdline.txt 
+ console=serial0,115200 console=tty1 root=PARTUUID=6c586e13-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
+ 
+  177  set -o vi
+  178  sudo kubectl get nodes
+  179  sudo cat /var/lib/rancher/k3s/server/node-token
+  180  kubectl get svc -n kube-system
+  181  sudo kubectl get svc -n kube-system
+
+#to fix iptables
+    3  swapoff -a
+#to enable journalctl
+    7  vi  /etc/systemd/journald.conf 
+    8  sudo mkdir -p /var/log/journal
+    9  journalctl --list-boots
+   10  id -u www-data
+   
+   11  kubectl version
+   12  kubectl cluster-info
+   13  vi /etc/ssh/sshd_config
+   14  kubectl get nodes
+#to run docker as pi
+   38  sudo usermod -aG docker pi
+   39  cat /etc/group
+  
